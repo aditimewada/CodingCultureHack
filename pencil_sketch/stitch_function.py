@@ -5,14 +5,7 @@ import numpy as np
 
 
 def horizontal_stitch(I, width):
-    '''
-    列扩展,直到宽为width
-    use alpha blending to smooth the borders in the replication
-    0 < I < 1
-    :param I:
-    :param width:
-    :return:
-    '''
+   
     Istitched = I
     while Istitched.shape[1] < width:
         window_size = int(round(I.shape[1] / 4))
@@ -33,14 +26,7 @@ def horizontal_stitch(I, width):
 
 
 def vertical_stitch(I, height):
-    '''
-    行扩展,直到长为height
-    use alpha blending to smooth the borders in the replication
-    0 < I < 1
-    :param I:
-    :param height:
-    :return:
-    '''
+   
     Istitched = I
     while Istitched.shape[0] < height:
         window_size = int(round(I.shape[0] / float(4)))
